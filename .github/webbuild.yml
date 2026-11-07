@@ -2,8 +2,6 @@ name: Website CI Pipeline
 
 on:
   workflow_dispatch:
-    branches:
-      - feature/ci-pipeline
 
 jobs:
   test:
