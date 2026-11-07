@@ -1,0 +1,24 @@
+name: Website CI Pipeline
+
+on:
+  workflow_dispatch:
+    branches:
+      - feature/ci-pipeline
+
+jobs:
+  test:
+    name: Test Website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Check website files
+        run: |
+          test -f index.html
+          test -f style.css
+          test -f script.js
+
+      - name: Confirm successful validation
+        run: echo "Website validation passed!"
