@@ -21,4 +21,4 @@ jobs:
           test -f script.js
 
       - name: Confirm successful validation
-        run: echo "Website validation passed!"
+        run: echo "my Website validation passed!"
