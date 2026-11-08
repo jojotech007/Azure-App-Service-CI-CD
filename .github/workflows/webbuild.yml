@@ -14,12 +14,21 @@ jobs:
 
       - name: Check website files
         run: |
-          test -f index.html
-          test -f style.css
-          test -f script.js
+          test -f websitefolder/index.html
+          test -f websitefolder/style.css
+          test -f websitefolder/script.js
 
       - name: Confirm successful validation
         run: echo "my Website validation passed!"
+
+  upload:
+    name: Upload Artifacts
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
 
       - name: upload artifacts
         uses: actions/upload-artifact@v4
