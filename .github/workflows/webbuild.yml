@@ -1,7 +1,7 @@
 name: Website CI Pipeline
 
 on:
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   test:
@@ -16,7 +16,7 @@ jobs:
         run: |
           test -f websitefolder/index.html
           test -f websitefolder/style.css
-          test -f websitefolder/script.js
+          test -f websitefolder/scri.
 
       - name: Confirm successful validation
         run: echo "my Website validation passed!"
