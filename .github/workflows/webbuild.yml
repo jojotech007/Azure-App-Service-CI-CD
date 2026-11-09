@@ -16,7 +16,7 @@ jobs:
         run: |
           test -f websitefolder/index.html
           test -f websitefolder/style.css
-          test -f websitefolder/scri.
+          test -f websitefolder/script.js
 
       - name: Confirm successful validation
         run: echo "my Website validation passed!"
