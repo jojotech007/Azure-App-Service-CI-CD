@@ -1,22 +1,29 @@
-name: Website CI Pipeline
+name: Deploy Website CI Pipeline
 
 on:
-  workflow_dispatch:
+  pull_request:
 
 jobs:
-  test:
-    name: Test Website
+  build:
+    uses: ./.github/workflows/webbuild.yml
+
+  deploy:
+    name: Deploy Website
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      - name: Check website files
-        run: |
-          test -f index.html
-          test -f style.css
-          test -f script.js
+      - name: log in to azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Confirm successful validation
-        run: echo "my Website validation passed!"
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: website-artifacts
+          path: ./artifacsfolder
+          
