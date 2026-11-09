@@ -26,4 +26,5 @@ jobs:
         with:
           name: website-artifacts
           path: ./artifacsfolder
+          stage: true
           
