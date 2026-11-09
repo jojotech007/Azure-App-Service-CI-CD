@@ -1,0 +1,30 @@
+name: Deploy Website CI Pipeline
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    uses: ./.github/workflows/webbuild.yml
+
+  deploy:
+    name: Deploy Website
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: log in to azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: website-artifacts
+          path: ./artifacsfolder
+          stage: true
+          
