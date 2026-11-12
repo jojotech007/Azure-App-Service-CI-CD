@@ -3,6 +3,10 @@ name: Deploy Website CI Pipeline
 on:
   pull_request:
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   build:
     uses: ./.github/workflows/webbuild.yml
@@ -19,7 +23,9 @@ jobs:
       - name: log in to azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Download artifacts
         uses: actions/download-artifact@v4
@@ -27,3 +33,9 @@ jobs:
           name: website-artifacts
           path: ./artifacsfolder
           
+      - name: Deploy to Azure Staging
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: basicwepapp
+          slot-name: stagingslot
+          package: ./artifacsfolder    
