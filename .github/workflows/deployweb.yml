@@ -1,0 +1,41 @@
+name: Deploy Website CI Pipeline
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build:
+    uses: ./.github/workflows/webbuild.yml
+
+  deploy:
+    name: Deploy Website
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: log in to azure
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: website-artifacts
+          path: ./artifacsfolder
+          
+      - name: Deploy to Azure Staging
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: basicwepapp
+          slot-name: stagingslot
+          package: ./artifacsfolder    
