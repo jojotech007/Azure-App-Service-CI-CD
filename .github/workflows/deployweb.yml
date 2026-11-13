@@ -36,6 +36,6 @@ jobs:
       - name: Deploy to Azure Staging
         uses: azure/webapps-deploy@v3
         with:
-          app-name: basicwepapp
+          app-name: basicwebapp
           slot-name: stagingslot
           package: ./artifacsfolder    
