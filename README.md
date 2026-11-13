@@ -1,5 +1,3 @@
-# Azure-App-Service-CI-CD
-
 # Azure App Service CI/CD Automation Using GitHub Actions
 
 **Technologies:** Microsoft Azure | GitHub Actions | Azure App Service | Microsoft Entra ID | HTML | CSS | JavaScript | YAML | Visual Studio Code
