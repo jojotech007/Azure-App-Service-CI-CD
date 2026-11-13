@@ -77,4 +77,4 @@ The main objectives of this project were to:
 - Configure secure GitHub-to-Azure authentication using Microsoft Entra ID federated credentials.
 - Deploy the application to Azure App Service using a staging deployment slot.
 - Troubleshoot deployment errors and verify successful application deployment.
--
+
