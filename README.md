@@ -57,3 +57,21 @@ The main objectives of this project were to:
 - Deploy the application to Azure App Service using a staging deployment slot.
 - Troubleshoot deployment errors and verify successful application deployment.
 
+
+
+
+## Tools and Technologies
+
+| Tool / Technology | Purpose |
+|---|---|
+| Visual Studio Code | Website development and YAML editing |
+| HTML, CSS and JavaScript | Website development |
+| Git | Source code version control |
+| GitHub | Source code hosting and repository management |
+| GitHub Actions | CI/CD workflow automation |
+| YAML | Defining automated workflow configurations |
+| Microsoft Azure | Cloud hosting platform |
+| Azure App Service | Hosting the web application |
+| Azure Deployment Slots | Providing a staging environment |
+| Microsoft Entra ID | Application registration and federated authentication |
+| OpenID Connect (OIDC) | Secure authentication between GitHub Actions and Azure |
