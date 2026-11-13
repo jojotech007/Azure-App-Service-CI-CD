@@ -13,3 +13,10 @@ Secure authentication between GitHub Actions and Microsoft Azure was configured 
 The deployment process was designed to validate application files, package the website as an artifact, and deploy the application to the Azure App Service staging slot.
 
 The project also involved troubleshooting deployment failures, correcting configuration errors, and verifying the successful deployment of the application.
+
+## Project Preview
+
+The following screenshot shows the successfully
+deployed website hosted on Azure App Service.
+
+![Deployed Website](screenshots/01-deployed-website.png)
