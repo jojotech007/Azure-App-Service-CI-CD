@@ -61,3 +61,20 @@ The deployment was successfully completed after troubleshooting and correcting a
 ## Project Architecture
 
 ![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Untitled%20Diagram.drawio.png)
+
+
+
+
+
+## Project Objectives
+
+The main objectives of this project were to:
+
+- Develop a basic web application using HTML, CSS and JavaScript.
+- Manage application source code using Git and GitHub.
+- Implement automated website validation using GitHub Actions.
+- Create a reusable CI/CD workflow for application deployment.
+- Configure secure GitHub-to-Azure authentication using Microsoft Entra ID federated credentials.
+- Deploy the application to Azure App Service using a staging deployment slot.
+- Troubleshoot deployment errors and verify successful application deployment.
+-
