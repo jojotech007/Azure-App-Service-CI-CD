@@ -17,11 +17,21 @@ The project also involved troubleshooting deployment failures, correcting config
 ## Project Preview
 
 The following screenshot shows the successfully
-deployed website hosted on Azure App Service deployed to stagingslot and then later swapped into production
+deployed website hosted on Azure App Service deployed to stagingslot and then later swapped into production. The production stage is showing the default page of Microsoft Azure 
 
 ## Staging slot
 
 ![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-13%20012138.png)
+
+
+
+
+
+
+## Production stage
+
+![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-13%20012245.png)
+
 
 
 
