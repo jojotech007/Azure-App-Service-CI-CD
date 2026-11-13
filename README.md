@@ -45,7 +45,7 @@ deployed website hosted on Azure App Service deployed to stagingslot and then la
 
 
 
-## Project Overview
+## Project Overview And Architecture
 
 This project demonstrates the implementation of a CI/CD pipeline using GitHub Actions to automate the validation and deployment of a website to Microsoft Azure App Service.
 
@@ -58,7 +58,7 @@ Secure authentication between GitHub and Azure was implemented using Microsoft E
 The deployment was successfully completed after troubleshooting and correcting a configuration error.
 
 
-## Project Architecture
+## Architecture
 
 ![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Untitled%20Diagram.drawio.png)
 
