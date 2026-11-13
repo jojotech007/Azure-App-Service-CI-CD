@@ -20,3 +20,7 @@ The following screenshot shows the successfully
 deployed website hosted on Azure App Service deployed to stagingslot and then later swapped into production
 
 ![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-13%20012138.png)
+
+
+![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-13%20012518.png)
+
