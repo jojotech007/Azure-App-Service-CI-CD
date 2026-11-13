@@ -19,4 +19,4 @@ The project also involved troubleshooting deployment failures, correcting config
 The following screenshot shows the successfully
 deployed website hosted on Azure App Service.
 
-![Deployed Website](screenshots/01-deployed-website.png)
+![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-13%20012219.png)
