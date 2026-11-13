@@ -1,25 +1,17 @@
 # Azure-App-Service-CI-CD
-Azure App Service CI/CD Pipeline Using GitHub Actions
 
-Introduction:
+# Azure App Service CI/CD Automation Using GitHub Actions
 
-This project demonstrates the implementation of a Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions and Microsoft Azure App Service.
-The objective was to automate the website validation and deployment process by integrating a GitHub repository with Azure App Service.
+**Technologies:** Microsoft Azure | GitHub Actions | Azure App Service | Microsoft Entra ID | HTML | CSS | JavaScript | YAML | Visual Studio Code
 
-The project uses GitHub Actions to validate website files, package the application as an artifact, and deploy it to an Azure App Service staging slot. Secure authentication between GitHub Actions and Azure is configured using OpenID Connect (OIDC) with Microsoft Entra ID, eliminating the need to store Azure credentials as plain-text secrets.
+## Introduction
 
-The implementation also demonstrates practical experience with Git branching, pull requests, reusable GitHub Actions workflows, artifact management, Azure resource configuration, and troubleshooting deployment issues.
+This project demonstrates the implementation of an automated Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions to deploy a web application to Microsoft Azure App Service.
 
-TOOLS USED:
-Vs Code
-HTML
-CSSS
-Javascript
-Github
-Github Action
+The project involved developing a basic website using HTML, CSS and JavaScript, hosting the source code on GitHub, configuring Azure App Service with a staging deployment slot, and implementing GitHub Actions workflows to automate website validation and deployment.
 
+Secure authentication between GitHub Actions and Microsoft Azure was configured using Microsoft Entra ID application registration and federated credentials, eliminating the need to store Azure client secrets for authentication.
 
-STEP 1:
-Creating the Project in Vs Code.
+The deployment process was designed to validate application files, package the website as an artifact, and deploy the application to the Azure App Service staging slot.
 
-First thing i cloned my github repository to vscode 
+The project also involved troubleshooting deployment failures, correcting configuration errors, and verifying the successful deployment of the application.
