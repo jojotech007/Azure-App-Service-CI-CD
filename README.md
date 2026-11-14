@@ -266,16 +266,6 @@ test -f websitefolder/script.js
 
 After correcting the paths, the CI workflow was executed again and validation completed successfully.
 
-The website files were then packaged and uploaded as a GitHub Actions artifact using:
-
-```yaml
-- name: Upload website artifact
-  uses: actions/upload-artifact@v4
-  with:
-    name: website-build
-    path: websitefolder/
-```
-
 **Outcome**
 
 - Resolved the file path validation failure.
