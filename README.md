@@ -209,4 +209,16 @@ This approach promotes workflow reusability, reduces duplicated YAML configurati
 
 
 
+
+
+### Staging Deployment Verification
+
+After the website loaded successfully, and its content, styling and JavaScript functionality were confirmed to be working as expected, i then promoted it to the production environment by swapping it at deploymnet slot (from stagingslot-to-production)
+
+
 ![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/5f0d73b5694c8e0dcdc5d30953dcfeef3e525ee5/screenshots/Screenshot%202026-11-14%20125916.png)
+
+
+
+![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/bd578cc289210da22846bf9a167699807da0050b/screenshots/Screenshot%202026-11-13%20012518.png)
+
