@@ -154,8 +154,9 @@ A GitHub Actions workflow was created to automate the validation of the website 
 
 The workflow checks for the presence of the essential application files (`index.html`, `style.css` and `script.js`) to ensure they are available before deployment.
 
-The validation process helps identify missing application files early and prevents an incomplete website from proceeding through the CI/CD pipeline.
+After successful validation, the website files are packaged and uploaded as a GitHub Actions artifact. This artifact is then made available for the deployment workflow to download and use during the Azure App Service deployment process.
 
+This approach ensures that only validated application files proceed to the deployment stage.
 
 
 
