@@ -411,4 +411,4 @@ If I were to improve this project further, I would:
 - Introduce separate staging and production deployment environments.
 - Add deployment approval before releasing changes to production.
 - Verify Azure resource names and deployment slot configurations before running the deployment workflow.
-- Check GitHub Actions event triggers and OIDC subject claims before configuring federated credentials.
+- Check the GitHub Actions trigger and deployment branch first, so the Microsoft Entra ID Federated Credential is configured to match the identity GitHub presents during Azure authentication.
