@@ -128,8 +128,19 @@ An application registration was created in Microsoft Entra ID to establish a tru
 
 Federated credentials were configured using OpenID Connect (OIDC), allowing GitHub Actions to authenticate securely with Azure without requiring a stored client secret.
 
-The App Registration's Service Principal was assigned the **Contributor** role at the **Resource Group scope**, providing the permissions required to deploy the web application to Azure App Service.
+The App Registration's Service Principal was assigned the **Contributor** role at the **Resource Group level**, providing the permissions required to deploy the web application to Azure App Service.
 
-Why this detail matters
+Why this matters
 - Contributor: Allows the Service Principal to manage resources within its assigned scope, but not grant access to other users.
 - Resource Group scope: Limits the role assignment to resources within that particular Resource Group, rather than the entire Azure subscription.
+
+
+
+
+
+![app reg](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20142034.png)
+
+
+
+![fed cred](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-12%20093339.png)
+
