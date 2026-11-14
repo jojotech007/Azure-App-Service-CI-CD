@@ -13,7 +13,7 @@ It showcases practical cloud engineering skills in application deployment, workf
 The following screenshot shows the successfully
 deployed website hosted on Azure App Service
 
-![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-13%20012138.png)
+![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20130155.png)
 
 
 
