@@ -111,3 +111,10 @@ Git was used to push the local project files from Visual Studio Code to GitHub, 
 An Azure App Service Web App named `basicwebapp` was created to host the website.
 
 A staging deployment slot named `stagingslot` was also created to provide a separate environment for testing deployments before they are moved to the production slot.
+
+
+![Deployed-website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20124415.png)
+
+
+
+![staging-environment](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20124621.png)
