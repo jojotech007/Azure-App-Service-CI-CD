@@ -242,7 +242,6 @@ The GitHub Actions CI workflow failed during website file validation with the fo
 text
 test -f script.js
 Error: Process completed with exit code 1.
-```
 
 **Root Cause**
 
@@ -263,7 +262,6 @@ yaml
 test -f websitefolder/index.html
 test -f websitefolder/style.css
 test -f websitefolder/script.js
-```
 
 **Validation and Artifact Creation**
 
