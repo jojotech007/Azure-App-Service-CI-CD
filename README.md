@@ -280,3 +280,58 @@ After correcting the paths, the CI workflow was executed again and validation co
 - GitHub Actions file validation commands must accurately reflect the repository directory structure
 - Linux exit codes help identify successful and failed commands
 - Understanding workflow logs, Linux exit codes is essential for effective CI/CD troubleshooting
+
+
+
+
+
+
+
+
+### 2. Troubleshooting: Azure Federated Identity Authentication Failure
+
+**Problem**
+
+The GitHub Actions deployment workflow failed during Azure login with:
+
+```text
+AADSTS700213: No matching federated identity record found
+```
+
+The presented GitHub OIDC subject ended in `:pull_request`, which did not match the subject configured in Microsoft Entra ID.
+
+**Root Cause**
+
+The deployment workflow was triggered by a Pull Request, while the Azure Federated Identity Credential was configured to trust the `main` branch. GitHub Actions generates different OIDC subject claims depending on the triggering event.
+
+**Resolution**
+
+- Separated Pull Request validation from Azure deployment.
+- Kept the CI workflow responsible for website validation.
+- Configured the CD workflow to run manually from the `main` branch.
+- Ensured the Azure Federated Credential matched the GitHub OIDC subject for the deployment context.
+- Reran the deployment successfully.
+
+**4. Correct Workflow Design**
+
+| Workflow | Trigger | Responsibility |
+|---|---|---|
+| CI | `pull_request` targeting `main` | Validate website files |
+| CD | `workflow_dispatch` | Authenticate with Azure and deploy to the staging slot |
+
+**5. Lessons Learned**
+
+- GitHub Actions generates different OIDC subject claims for different workflow events.
+- Microsoft Entra ID Federated Credentials must match the actual OIDC claims.
+- Pull Request validation and Azure deployment should have separate responsibilities.
+- Secure authentication with OIDC eliminates the need for long-lived Azure credentials.
+
+**6. Key Takeaway**
+
+GitHub Actions uses different OIDC subject claims for different events. Microsoft Entra ID requires the issuer, subject and audience to match the configured Federated Identity Credential.
+
+Separating CI validation from CD deployment ensures that only approved code from `main` is deployed to Azure.
+
+**References:**
+- [Microsoft Learn – Workload Identity Federation](https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation)
+- [Microsoft Learn – Configure a federated identity credential for GitHub Actions](https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation-create-trust-github)
