@@ -118,3 +118,18 @@ A staging deployment slot named `stagingslot` was also created to provide a sepa
 
 
 ![staging-environment](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20124621.png)
+
+
+
+
+### 3. Microsoft Entra ID App Registration and Federated Credentials
+
+An application registration was created in Microsoft Entra ID to establish a trusted identity between GitHub Actions and Azure.
+
+Federated credentials were configured using OpenID Connect (OIDC), allowing GitHub Actions to authenticate securely with Azure without requiring a stored client secret.
+
+The App Registration's Service Principal was assigned the **Contributor** role at the **Resource Group scope**, providing the permissions required to deploy the web application to Azure App Service.
+
+Why this detail matters
+- Contributor: Allows the Service Principal to manage resources within its assigned scope, but not grant access to other users.
+- Resource Group scope: Limits the role assignment to resources within that particular Resource Group, rather than the entire Azure subscription.
