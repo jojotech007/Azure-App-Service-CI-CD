@@ -209,4 +209,4 @@ This approach promotes workflow reusability, reduces duplicated YAML configurati
 
 
 
-![Deployed Website](screenshots/Screenshot 2026-11-14 125916.png)
+![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/5f0d73b5694c8e0dcdc5d30953dcfeef3e525ee5/screenshots/Screenshot%202026-11-14%20125916.png)
