@@ -290,6 +290,13 @@ After correcting the paths, the CI workflow was executed again and validation co
 
 ### 2. Troubleshooting: Azure Federated Identity Authentication Failure
 
+
+
+![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/4174d3fd577cfd899a4074f6e826ee54e528c25e/screenshots/Screenshot%202026-11-12%20112943.png)
+
+
+
+
 **Problem**
 
 The GitHub Actions deployment workflow failed during Azure login with:
@@ -331,7 +338,3 @@ The deployment workflow was triggered by a Pull Request, while the Azure Federat
 GitHub Actions uses different OIDC subject claims for different events. Microsoft Entra ID requires the issuer, subject and audience to match the configured Federated Identity Credential.
 
 Separating CI validation from CD deployment ensures that only approved code from `main` is deployed to Azure.
-
-**References:**
-- [Microsoft Learn – Workload Identity Federation](https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation)
-- [Microsoft Learn – Configure a federated identity credential for GitHub Actions](https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation-create-trust-github)
