@@ -144,3 +144,25 @@ Why this matters
 
 ![fed cred](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-12%20093339.png)
 
+
+
+
+
+### 4. GitHub Actions CI Workflow – Website Validation
+
+A GitHub Actions workflow was created to automate the validation of the website source files.
+
+The workflow checks for the presence of the essential application files (`index.html`, `style.css` and `script.js`) to ensure they are available before deployment.
+
+The validation process helps identify missing application files early and prevents an incomplete website from proceeding through the CI/CD pipeline.
+
+
+
+
+
+![vscode yml](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20145545.png)
+
+
+
+![CI-validation](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20145756.png)
+
