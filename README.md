@@ -275,11 +275,8 @@ test -f websitefolder/script.js
 After correcting the paths, the CI workflow was executed again and validation completed successfully.
 
 
-**Outcome**
+**Lerson Learned**
 
-- Resolved the file path validation failure.
-- Successfully reran the CI workflow.
-- Successfully created and uploaded the website artifact.
-- Prepared the artifact for download by the separate Azure deployment workflow.
-
-**Key Takeaway:** GitHub Actions file validation commands must accurately reflect the repository directory structure. Linux exit codes help identify successful and failed commands.Understanding workflow logs, Linux exit codes is essential for effective CI/CD troubleshooting.
+- GitHub Actions file validation commands must accurately reflect the repository directory structure
+- Linux exit codes help identify successful and failed commands
+- Understanding workflow logs, Linux exit codes is essential for effective CI/CD troubleshooting
