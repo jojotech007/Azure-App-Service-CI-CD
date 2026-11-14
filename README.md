@@ -211,7 +211,7 @@ This approach promotes workflow reusability, reduces duplicated YAML configurati
 
 
 
-### Staging Deployment Verification
+### 6. Staging Deployment Verification
 
 After the website loaded successfully, and its content, styling and JavaScript functionality were confirmed to be working as expected, i then promoted it to the production environment by swapping it at deploymnet slot (from stagingslot-to-production)
 
@@ -222,3 +222,65 @@ After the website loaded successfully, and its content, styling and JavaScript f
 
 ![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/bd578cc289210da22846bf9a167699807da0050b/screenshots/Screenshot%202026-11-13%20012518.png)
 
+
+
+
+## Troubleshooting and Lessons Learned
+
+
+
+### Troubleshooting: GitHub Actions File Path Validation Failure
+
+**Problem**
+
+The GitHub Actions CI workflow failed during website file validation with the following error:
+
+```text
+test -f script.js
+Error: Process completed with exit code 1.
+```
+
+**Root Cause**
+
+The website files had been moved from the repository root into a folder named `websitefolder`, but the validation commands still referenced the old file paths.
+
+**Solution**
+
+Updated the file paths in the GitHub Actions YAML workflow to match the new directory structure.
+
+Before:
+```yaml
+test -f index.html
+test -f style.css
+test -f script.js
+```
+
+After:
+```yaml
+test -f websitefolder/index.html
+test -f websitefolder/style.css
+test -f websitefolder/script.js
+```
+
+**Validation and Artifact Creation**
+
+After correcting the paths, the CI workflow was executed again and validation completed successfully.
+
+The website files were then packaged and uploaded as a GitHub Actions artifact using:
+
+```yaml
+- name: Upload website artifact
+  uses: actions/upload-artifact@v4
+  with:
+    name: website-build
+    path: websitefolder/
+```
+
+**Outcome**
+
+- Resolved the file path validation failure.
+- Successfully reran the CI workflow.
+- Successfully created and uploaded the website artifact.
+- Prepared the artifact for download by the separate Azure deployment workflow.
+
+**Key Takeaway:** GitHub Actions file validation commands must accurately reflect the repository directory structure. Understanding workflow logs, Linux exit codes and artifact management is essential for effective CI/CD troubleshooting.
