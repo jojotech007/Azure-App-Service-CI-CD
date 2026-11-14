@@ -319,22 +319,17 @@ The deployment workflow was triggered by a Pull Request, while the Azure Federat
 - Ensured the Azure Federated Credential matched the GitHub OIDC subject for the deployment context.
 - Reran the deployment successfully.
 
-**4. Correct Workflow Design**
+**4. Workflow Design**
 
 | Workflow | Trigger | Responsibility |
 |---|---|---|
-| CI | `pull_request` targeting `main` | Validate website files |
+| CI | `pull_request` targeting main | Validate website files |
 | CD | `workflow_dispatch` | Authenticate with Azure and deploy to the staging slot |
 
-**5. Lessons Learned**
+### **Lessons Learned**
 
-- GitHub Actions generates different OIDC subject claims for different workflow events.
-- Microsoft Entra ID Federated Credentials must match the actual OIDC claims.
-- Pull Request validation and Azure deployment should have separate responsibilities.
-- Secure authentication with OIDC eliminates the need for long-lived Azure credentials.
-
-**6. Key Takeaway**
-
-GitHub Actions uses different OIDC subject claims for different events. Microsoft Entra ID requires the issuer, subject and audience to match the configured Federated Identity Credential.
-
-Separating CI validation from CD deployment ensures that only approved code from `main` is deployed to Azure.
+- GitHub Actions uses different identity information depending on how a workflow is triggered, such as a Pull Request or a push to the `main` branch.
+- The identity details sent by GitHub must match what Microsoft Entra ID is configured to trust.
+- CI should focus on checking the website, while CD should handle deploying it to Azure.
+- Using OIDC allows GitHub Actions to securely log in to Azure without storing permanent passwords or secret credentials.
+- Separating CI validation from CD deployment ensures that only approved code from `main` is deployed to Azure.
