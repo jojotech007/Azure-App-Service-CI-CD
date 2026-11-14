@@ -252,16 +252,20 @@ The website files had been moved from the repository root into a folder named `w
 Updated the file paths in the GitHub Actions YAML workflow to match the new directory structure.
 
 Before:
+
 yaml
-test -f index.html
-test -f style.css
-test -f script.js
+
+- test -f index.html
+- test -f style.css
+- test -f script.js
 
 After:
+
 yaml
-test -f websitefolder/index.html
-test -f websitefolder/style.css
-test -f websitefolder/script.js
+
+- test -f websitefolder/index.html
+- test -f websitefolder/style.css
+- test -f websitefolder/script.js
 
 **Validation and Artifact Creation**
 
