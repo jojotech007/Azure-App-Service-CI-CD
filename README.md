@@ -154,7 +154,8 @@ Why this matters
 
 ### 4. GitHub Actions CI Workflow – Website Validation
 
-**Continuous Integration (CI):** Automatically checks and validates website code whenever changes are submitted through a Pull Request.
+**Continuous Integration (CI):** 
+- Automatically checks and validates website code whenever changes are submitted through a Pull Request.
 
 
 A GitHub Actions workflow was created to automate the validation of the website source files.
@@ -189,7 +190,8 @@ What this section demonstrates
 ### 5. GitHub Actions CD Workflow – Azure App Service Deployment
 
 
-**Continuous Deployment (CD):** Automatically deploys validated and approved website code to Azure App Service.
+**Continuous Deployment (CD):** 
+- Automatically deploys validated and approved website code to Azure App Service.
 
 **In simple terms:** CI checks that your code is working correctly, while CD delivers the code to Azure.
 
