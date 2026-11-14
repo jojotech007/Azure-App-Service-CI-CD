@@ -387,8 +387,6 @@ The Web App name in the deployment YAML contained a spelling mistake.
 
 - Always verify Azure resource names before deployment.
 - Ensure resource names in YAML match those in the Azure Portal.
-- Learn to identify the difference between warnings and actual errors.
 - Use GitHub Actions logs to troubleshoot deployment failures.
-- 
-Successful Azure authentication does not guarantee successful deployment. The deployment workflow must also reference the correct Azure Web App and deployment slot.
+- Successful Azure authentication does not guarantee successful deployment. The deployment workflow must also reference the correct Azure Web App and deployment slot.
 
