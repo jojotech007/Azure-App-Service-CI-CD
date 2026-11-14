@@ -167,3 +167,12 @@ This approach ensures that only validated application files proceed to the deplo
 
 ![CI-validation](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20145756.png)
 
+
+
+
+What this section demonstrates
+- GitHub Actions workflow configuration using YAML.
+- Automated file validation using Linux shell commands.
+- Workflow execution on an Ubuntu runner.
+- Early detection of missing application files
+- Then packaged the website as an artifact to  be used for the deploymnet
