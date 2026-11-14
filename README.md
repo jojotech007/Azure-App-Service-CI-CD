@@ -83,3 +83,9 @@ The main objectives of this project were to:
 The website was developed using Visual Studio Code with HTML, CSS and JavaScript.
 
 The application files were organized into a project folder and prepared for source control using Git.
+
+### GitHub Repository Setup
+
+A GitHub repository was created to host the website source code.
+
+Git was used to push the local project files from Visual Studio Code to GitHub, providing a central location for version control and CI/CD automation.
