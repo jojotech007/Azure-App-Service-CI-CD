@@ -247,7 +247,7 @@ Error: Process completed with exit code 1.
 
 **Root Cause**
 
-The website files had been moved from the repository root into a folder named `websitefolder`, but the validation commands still referenced the old file paths.
+The website files had been moved from the repository root(Azure-App-Service-CI-CD) into a folder named websitefolder but the validation commands still referenced the old file paths.
 
 **Solution**
 
@@ -279,4 +279,4 @@ After correcting the paths, the CI workflow was executed again and validation co
 - Successfully created and uploaded the website artifact.
 - Prepared the artifact for download by the separate Azure deployment workflow.
 
-**Key Takeaway:** GitHub Actions file validation commands must accurately reflect the repository directory structure. Understanding workflow logs, Linux exit codes and artifact management is essential for effective CI/CD troubleshooting.
+**Key Takeaway:** GitHub Actions file validation commands must accurately reflect the repository directory structure. Linux exit codes help identify successful and failed commands.Understanding workflow logs, Linux exit codes is essential for effective CI/CD troubleshooting.
