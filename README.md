@@ -197,7 +197,7 @@ This approach promotes workflow reusability, reduces duplicated YAML configurati
 
 
 
-![CDl](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20145545.png)
+![CDl](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20155931.png)
 
 
 ![CD](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20160155.png)
