@@ -36,7 +36,7 @@ The application is hosted on an Azure Web App named `basicwebapp`.
 
 ## Architecture
 
-![Architechture](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Untitled%20Diagram.drawio.png)
+![Architechture](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20133726.png)
 
 
 
