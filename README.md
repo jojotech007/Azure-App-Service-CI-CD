@@ -225,11 +225,14 @@ After the website loaded successfully, and its content, styling and JavaScript f
 
 
 
+
+
+
 ## Troubleshooting and Lessons Learned
 
 
 
-### Troubleshooting: GitHub Actions File Path Validation Failure
+### 1. Troubleshooting: GitHub Actions File Path Validation Failure
 
 
 
@@ -247,7 +250,7 @@ Error: Process completed with exit code 1.
 
 **Root Cause**
 
-The website files had been moved from the repository root(Azure-App-Service-CI-CD) into a folder named websitefolder but the validation commands still referenced the old file paths.
+The website files had been moved from the repository root (Azure-App-Service-CI-CD) into a folder named websitefolder but the validation commands still referenced the old file paths.
 
 **Solution**
 
