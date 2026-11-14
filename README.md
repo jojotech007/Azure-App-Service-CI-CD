@@ -231,11 +231,15 @@ After the website loaded successfully, and its content, styling and JavaScript f
 
 ### Troubleshooting: GitHub Actions File Path Validation Failure
 
+
+
+![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/3469fb3d1d6c1f5ae4e0a71014e00beb73b4445d/screenshots/Screenshot%202026-11-14%20175316.png)
+
 **Problem**
 
 The GitHub Actions CI workflow failed during website file validation with the following error:
 
-```text
+text
 test -f script.js
 Error: Process completed with exit code 1.
 ```
@@ -249,14 +253,13 @@ The website files had been moved from the repository root into a folder named `w
 Updated the file paths in the GitHub Actions YAML workflow to match the new directory structure.
 
 Before:
-```yaml
+yaml
 test -f index.html
 test -f style.css
 test -f script.js
-```
 
 After:
-```yaml
+yaml
 test -f websitefolder/index.html
 test -f websitefolder/style.css
 test -f websitefolder/script.js
