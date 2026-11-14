@@ -4,15 +4,9 @@
 
 ## Introduction
 
-This project demonstrates the implementation of an automated Continuous Integration and Continuous Deployment (CI/CD) pipeline using GitHub Actions to deploy a web application to Microsoft Azure App Service.
+This project demonstrates the implementation of an automated CI/CD solution for deploying a web application to Microsoft Azure App Service using GitHub Actions.
 
-The project involved developing a basic website using HTML, CSS and JavaScript, hosting the source code on GitHub, configuring Azure App Service with a staging deployment slot, and implementing GitHub Actions workflows to automate website validation and deployment.
-
-Secure authentication between GitHub Actions and Microsoft Azure was configured using Microsoft Entra ID application registration and federated credentials, eliminating the need to store Azure client secrets for authentication.
-
-The deployment process was designed to validate application files, package the website as an artifact, and deploy the application to the Azure App Service staging slot.
-
-The project also involved troubleshooting deployment failures, correcting configuration errors, and verifying the successful deployment of the application.
+It showcases practical cloud engineering skills in application deployment, workflow automation, secure authentication and deployment troubleshooting.
 
 ## Project Preview
 
@@ -26,15 +20,18 @@ deployed website hosted on Azure App Service
 
 ## Project Overview And Architecture
 
-This project demonstrates the implementation of a CI/CD pipeline using GitHub Actions to automate the validation and deployment of a website to Microsoft Azure App Service.
+The solution uses GitHub Actions to automate the validation and deployment of a website hosted on Azure App Service.
 
-The website was developed using HTML, CSS and JavaScript in Visual Studio Code and stored in GitHub.
+The workflow follows this process:
 
-GitHub Actions was configured to validate application files, package the website and deploy it to an Azure App Service staging slot.
+1. Website source code is maintained in GitHub.
+2. GitHub Actions validates essential application files.
+3. The website is packaged and uploaded as a workflow artifact.
+4. The deployment workflow downloads the artifact.
+5. GitHub Actions authenticates with Azure using Microsoft Entra ID federated credentials.
+6. The website is deployed to the Azure App Service staging slot for verification.
 
-Secure authentication between GitHub and Azure was implemented using Microsoft Entra ID federated credentials.
-
-The deployment was successfully completed after troubleshooting and correcting a configuration error.
+The application is hosted on an Azure Web App named `basicwebapp`.
 
 
 ## Architecture
