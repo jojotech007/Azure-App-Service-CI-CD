@@ -79,7 +79,7 @@ The main objectives of this project were to:
 
 ## Project Implementation
 
-### 1 Website Development
+### 1. Website Development
 
 The website was developed using Visual Studio Code with HTML, CSS and JavaScript.
 
