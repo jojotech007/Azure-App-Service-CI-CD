@@ -121,6 +121,10 @@ A staging deployment slot named `stagingslot` was also created to provide a sepa
 
 
 
+![staging-environment](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/0ad60459523a10a3501b7bd341b710e7d54a7cd5/screenshots/Screenshot%202026-11-14%20130055.png)
+
+
+
 
 ### 3. Microsoft Entra ID App Registration and Federated Credentials
 
