@@ -331,7 +331,7 @@ The deployment workflow was triggered by a Pull Request, while the Azure Federat
 
 | Workflow | Trigger | What it does |
 |---|---|---|
-| CI | `pull_request` to `main` | Validates website files before merging. |
+| CI | `pull_request` | Validates website files before merging. |
 | CD (Manual) | `workflow_dispatch` | Allows manual deployment when needed. |
 | CD (Automatic) | `push` to `main` | Automatically deploys the website to Azure after merging. |
 
