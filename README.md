@@ -319,7 +319,7 @@ The deployment workflow was triggered by a Pull Request, while the Azure Federat
 - Ensured the Azure Federated Credential matched the GitHub OIDC subject for the deployment context.
 - Reran the deployment successfully.
 
-**4. Workflow Design**
+**Workflow Design**
 
 | Workflow | Trigger | Responsibility |
 |---|---|---|
@@ -332,4 +332,4 @@ The deployment workflow was triggered by a Pull Request, while the Azure Federat
 - The identity details sent by GitHub must match what Microsoft Entra ID is configured to trust.
 - CI should focus on checking the website, while CD should handle deploying it to Azure.
 - Using OIDC allows GitHub Actions to securely log in to Azure without storing permanent passwords or secret credentials.
-- Separating CI validation from CD deployment ensures that only approved code from `main` is deployed to Azure.
+- Separating CI validation from CD deployment ensures that only approved code from main is deployed to Azure.
