@@ -36,7 +36,7 @@ The application is hosted on an Azure Web App named `basicwebapp`.
 
 ## Architecture
 
-![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Untitled%20Diagram.drawio.png)
+![Architechture](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Untitled%20Diagram.drawio.png)
 
 
 
@@ -90,3 +90,13 @@ The application files were organized into a project folder and prepared for sour
 A GitHub repository was created to host the website source code.
 
 Git was used to push the local project files from Visual Studio Code to GitHub, providing a central location for version control and CI/CD automation.
+
+
+
+
+![Vscode-repo](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20105802.png)
+
+
+
+
+![github-repo](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20110157.png)
