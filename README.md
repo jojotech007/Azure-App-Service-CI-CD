@@ -323,7 +323,7 @@ The deployment workflow was triggered by a Pull Request, while the Azure Federat
 - Ensured the Azure Federated Credential matched the GitHub OIDC subject for the deployment context.
 - Reran the deployment successfully.
 
-**Workflow Design**
+**Workflow Trigger**
 
 | Workflow | Trigger | Responsibility |
 |---|---|---|
