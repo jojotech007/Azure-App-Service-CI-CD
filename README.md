@@ -400,3 +400,15 @@ The Web App name in the deployment YAML contained a spelling mistake.
 - Use GitHub Actions logs to troubleshoot deployment failures.
 - Successful Azure authentication does not guarantee successful deployment. The deployment workflow must also reference the correct Azure Web App and deployment slot.
 
+
+
+
+
+## What I Would Do Differently Next Time
+
+If I were to improve this project further, I would:
+
+- Introduce separate staging and production deployment environments.
+- Add deployment approval before releasing changes to production.
+- Verify Azure resource names and deployment slot configurations before running the deployment workflow.
+- Check GitHub Actions event triggers and OIDC subject claims before configuring federated credentials.
