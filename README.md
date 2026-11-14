@@ -333,3 +333,62 @@ The deployment workflow was triggered by a Pull Request, while the Azure Federat
 - CI should focus on checking the website, while CD should handle deploying it to Azure.
 - Using OIDC allows GitHub Actions to securely log in to Azure without storing permanent passwords or secret credentials.
 - Separating CI validation from CD deployment ensures that only approved code from main is deployed to Azure.
+
+
+
+
+
+
+
+### 3. Troubleshooting: Azure App Service Resource Not Found
+
+![Deployed Website](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/6ba34bd0a358271db8b358390b7c6f8bd37f358a/screenshots/Screenshot%202026-11-13%20010647.png)
+
+
+**Problem**
+
+After successfully authenticating with Azure, the deployment failed with the following error:
+
+```text
+Error: Resource basicwepapp/stagingslot
+of type Microsoft.Web/Sites/Slots doesn't exist.
+```
+
+**Root Cause**
+
+The Web App name in the deployment YAML contained a spelling mistake.
+
+| Configuration | Web App Name |
+|---|---|
+| Incorrect YAML name | `basicwepapp` |
+| Actual Azure name | `basicwebapp` |
+| Deployment slot | `stagingslot` |
+
+**Resolution**
+
+- Opened the Azure Portal and checked the actual Web App name.
+- Compared it with the `app-name` value in `deployweb.yml`.
+- Corrected the spelling from `basicwepapp` to `basicwebapp`.
+- Reran the GitHub Actions workflow.
+- Deployment to the staging slot completed successfully.
+
+**Corrected Deployment Configuration**
+
+```yaml
+- name: Deploy to Azure Staging
+  uses: azure/webapps-deploy@v3
+  with:
+    app-name: basicwebapp
+    slot-name: stagingslot
+    package: ./website-files
+```
+
+**Lessons Learned**
+
+- Always verify Azure resource names before deployment.
+- Ensure resource names in YAML match those in the Azure Portal.
+- Learn to identify the difference between warnings and actual errors.
+- Use GitHub Actions logs to troubleshoot deployment failures.
+- 
+Successful Azure authentication does not guarantee successful deployment. The deployment workflow must also reference the correct Azure Web App and deployment slot.
+
