@@ -85,18 +85,16 @@ The website was developed using Visual Studio Code with HTML, CSS and JavaScript
 
 The application files were organized into a project folder and prepared for source control using Git.
 
+
+![Vscode-repo](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20105802.png)
+
+
+
 ### GitHub Repository Setup
 
 A GitHub repository was created to host the website source code.
 
 Git was used to push the local project files from Visual Studio Code to GitHub, providing a central location for version control and CI/CD automation.
-
-
-
-
-![Vscode-repo](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20105802.png)
-
-
 
 
 ![github-repo](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20110157.png)
