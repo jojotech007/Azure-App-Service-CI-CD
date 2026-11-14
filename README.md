@@ -72,3 +72,14 @@ The main objectives of this project were to:
 | Azure Deployment Slots | Providing a staging environment |
 | Microsoft Entra ID | Application registration and federated authentication |
 | OpenID Connect (OIDC) | Secure authentication between GitHub Actions and Azure |
+
+
+
+
+## Project Implementation
+
+### 5.1 Website Development
+
+The website was developed using Visual Studio Code with HTML, CSS and JavaScript.
+
+The application files were organized into a project folder and prepared for source control using Git.
