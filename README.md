@@ -71,7 +71,7 @@ The main objectives of this project were to:
 | Azure App Service | Hosting the web application |
 | Azure Deployment Slots | Providing a staging environment |
 | Microsoft Entra ID | Application registration and federated authentication |
-| OpenID Connect (OIDC) | Secure authentication between GitHub Actions and Azure |
+| OpenID Connect (OIDC) | Secure secretless authentication between GitHub Actions and Azure |
 
 
 
