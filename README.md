@@ -176,3 +176,32 @@ What this section demonstrates
 - Workflow execution on an Ubuntu runner.
 - Early detection of missing application files
 - Then packaged the website as an artifact to  be used for the deploymnet
+
+
+
+### 5. GitHub Actions CD Workflow – Azure App Service Deployment
+
+A separate GitHub Actions workflow was configured to automate the deployment of the website to Microsoft Azure.
+
+The existing website validation workflow was configured as a reusable workflow using the `workflow_call` trigger. The deployment workflow invokes this reusable YAML workflow to execute the validation process before proceeding with deployment.
+
+After successful validation, the deployment workflow downloads the generated artifact containing the packaged website files.
+
+GitHub Actions authenticates with Azure using Microsoft Entra ID federated credentials (OIDC), eliminating the need to store Azure client secrets in GitHub.
+
+The downloaded artifact is then deployed to the `stagingslot` deployment slot of the Azure App Service Web App named `basicwebapp`.
+
+This approach promotes workflow reusability, reduces duplicated YAML configurations and automates the deployment process.
+
+
+
+
+
+![CDl](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20145545.png)
+
+
+![CD](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20160155.png)
+
+
+
+![CD](https://github.com/jojotech007/Azure-App-Service-CI-CD/blob/main/screenshots/Screenshot%202026-11-14%20160429.png)
